@@ -4376,23 +4376,10 @@ var mainHeadDiv = document.createElement("div");
 var mainHeadDivH1 = document.createElement("h1");
 var mainHeadDivH1Txt = document.createTextNode("Premier League 2015/16");
 
-
-
-
-
-
-
-
-
 mainDiv.appendChild(mainHeadDiv);
 mainHeadDiv.appendChild(mainHeadDivH1);
 mainHeadDivH1.appendChild(mainHeadDivH1Txt);
 
-
-
-
-    
-  
 
 // console.log(matche)
 
@@ -4468,47 +4455,6 @@ for(var key in matche ) {
 
                 tableTr2.appendChild(tableTr2Td3)
                 tableTr2Td3.appendChild(tableTr2Td3Txt);
-
-                
-            
-
-
-        
-        
-        // console.log(matchesArr[data])
-        // var matchesArrH4 = document.createElement("h4");
-        // var matchesArrH4Txt = document.createTextNode("Date: "+matchesArr[data].date);
-
-        // var matchesArrTeam1H4 = document.createElement("h4");
-        // var matchesArrTeam1H4Txt = document.createTextNode("Team 1: "+matchesArr[data].team1);
-
-        // var matchesArrTeam2H4 = document.createElement("h4");
-        // var matchesArrTeam2H4Txt = document.createTextNode("Team 2: "+matchesArr[data].team2);
-
-        // var matchesArrTeam2H4 = document.createElement("h4");
-        // var matchesArrTeam2H4Txt = document.createTextNode("Team 2: "+matchesArr[data].team2);
-        
-       
-        // console.log(score)
-        
-        
-
-            
-    // listingDiv.appendChild(matchesArrH4);
-    // matchesArrH4.appendChild(matchesArrH4Txt)
-         
-    // listingDiv.appendChild(matchesArrTeam1H4);
-    // matchesArrTeam1H4.appendChild(matchesArrTeam1H4Txt)
-
-    // listingDiv.appendChild(matchesArrTeam2H4);
-    // matchesArrTeam2H4.appendChild(matchesArrTeam2H4Txt)
-
-    // listingDiv.appendChild(scoreH4);
-    // scoreH4.appendChild(scoreH4Txt)
-
-    // console.log(matchesArr[data].team1)
-
-
     }
 
     
