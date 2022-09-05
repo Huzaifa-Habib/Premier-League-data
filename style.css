@@ -1,0 +1,78 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    background-color: thistle;
+} 
+
+#mainCont div:nth-child(1){
+    text-align: center;
+    color: white;
+    letter-spacing: 0.2em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rebeccapurple;
+    width: 40%;
+    padding: 1px 10px;
+    margin-top: 40px;
+}
+
+.matches-div{
+    background-color: white;
+    box-shadow: 5px 10px 8px #888888;
+    margin-top: 40px;
+}
+
+.matches-div h1{
+    text-align: center;
+    padding-top: 30px;
+    font-family: cursive;
+    color: firebrick;
+    letter-spacing: 0.1em;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 60px;
+}
+
+th{
+    font-size: 30px;
+    font-family: cursive;
+    color: crimson;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 4px solid gainsboro;
+
+}
+
+th:nth-child(1){
+    width: calc(20vw);
+
+}
+th:nth-child(2){
+    width: calc(50vw);
+
+}
+th:nth-child(3){
+    width: calc(20vw);
+
+}
+
+td{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 50px;
+    border-right: 4px solid gainsboro;
+    border-bottom: 4px solid gainsboro;
+    color: dodgerblue;
+
+    
+
+}
+

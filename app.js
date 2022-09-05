@@ -1,4 +1,3 @@
-
 var mainDiv = document.getElementById("mainCont");
 
 var matche = [ {
@@ -4377,7 +4376,7 @@ var mainHeadDiv = document.createElement("div");
 var mainHeadDivH1 = document.createElement("h1");
 var mainHeadDivH1Txt = document.createTextNode("Premier League 2015/16");
 
-var listingDiv = document.createElement("div");
+
 
 
 
@@ -4388,7 +4387,7 @@ var listingDiv = document.createElement("div");
 mainDiv.appendChild(mainHeadDiv);
 mainHeadDiv.appendChild(mainHeadDivH1);
 mainHeadDivH1.appendChild(mainHeadDivH1Txt);
-mainDiv.appendChild(listingDiv);
+
 
 
 
@@ -4399,59 +4398,113 @@ mainDiv.appendChild(listingDiv);
 
 for(var key in matche ) {
     // console.log(matche[key].matches)
-    var matchesHead = document.createElement("h2");
-    var matchesHeadTxt = document.createTextNode(matche[key].name);
-     
+    var matchesDiv = document.createElement("div");
+    matchesDiv.setAttribute("class", "matches-div")
+    var matchesDivH1 = document.createElement("h1");
+    var matchesDivH1Txt = document.createTextNode(matche[key].name)
+
+    var tableDiv = document.createElement("div")
+
+    var table = document.createElement("table")
+    var tableTr1 = document.createElement("tr")
+    var tableTr1Th1 =document.createElement("th")
+    var tableTr1Th1Txt = document.createTextNode("Dates")
+
+    var tableTr1Th2 =document.createElement("th")
+    var tableTr1Th2Txt = document.createTextNode("Team1 VS Team2")
+
+    var tableTr1Th3 =document.createElement("th")
+    var tableTr1Th3Txt = document.createTextNode("Scores")
+
+
+
     var matchesArr = matche[key].matches;
     // console.log(matchesArr)
 
-    
+    mainDiv.appendChild(matchesDiv)
+    matchesDiv.appendChild(matchesDivH1);
+    matchesDivH1.appendChild(matchesDivH1Txt)
 
-    listingDiv.appendChild(matchesHead);
-    matchesHead.appendChild(matchesHeadTxt)
+   
+    matchesDiv.appendChild(tableDiv)
+    tableDiv.appendChild(table)
+    table.appendChild(tableTr1)
+    tableTr1.appendChild(tableTr1Th1)
+    tableTr1Th1.appendChild(tableTr1Th1Txt);
+
+    tableTr1.appendChild(tableTr1Th2)
+    tableTr1Th2.appendChild(tableTr1Th2Txt);
+
+    tableTr1.appendChild(tableTr1Th3)
+    tableTr1Th3.appendChild(tableTr1Th3Txt);
 
 
     
 
     for (var data in matchesArr){
-        // console.log(matchesArr[data])
-        var matchesArrH4 = document.createElement("h4");
-        var matchesArrH4Txt = document.createTextNode("Date: "+matchesArr[data].date);
 
-        var matchesArrTeam1H4 = document.createElement("h4");
-        var matchesArrTeam1H4Txt = document.createTextNode("Team 1: "+matchesArr[data].team1);
+        var tableTr2 = document.createElement("tr")
+        var tableTr2Td1 =document.createElement("td")
+        var tableTr2Td1Txt = document.createTextNode(matchesArr[data].date)
 
-        var matchesArrTeam2H4 = document.createElement("h4");
-        var matchesArrTeam2H4Txt = document.createTextNode("Team 2: "+matchesArr[data].team2);
+        var tableTr2Td2 =document.createElement("td")
+        var tableTr2Td2Txt = document.createTextNode(matchesArr[data].team1 + " VS " + matchesArr[data].team2)
 
-        var matchesArrTeam2H4 = document.createElement("h4");
-        var matchesArrTeam2H4Txt = document.createTextNode("Team 2: "+matchesArr[data].team2);
+       
+
+
+        table.appendChild(tableTr2)
+        tableTr2.appendChild(tableTr2Td1)
+        tableTr2Td1.appendChild(tableTr2Td1Txt);
+
+        tableTr2.appendChild(tableTr2Td2)
+        tableTr2Td2.appendChild(tableTr2Td2Txt);
+
         
-        var score = matchesArr[data].score.ft
 
-        for (var data2 in score) {
-            console.log(score[data2])
-            var scoreH4 = document.createElement("h4");
-            var scoreH4Txt = document.createTextNode("Score: "+" Team1: "+score[0]+ " Team2: "+ score[1])
-            console.log(scoreH4Txt)
+         var score = matchesArr[data].score.ft
+                var tableTr2Td3 =document.createElement("td")
+                var tableTr2Td3Txt = document.createTextNode(score[0] + "----" + score[1] )
 
-        }
-        console.log(score)
+                tableTr2.appendChild(tableTr2Td3)
+                tableTr2Td3.appendChild(tableTr2Td3Txt);
+
+                
+            
+
+
+        
+        
+        // console.log(matchesArr[data])
+        // var matchesArrH4 = document.createElement("h4");
+        // var matchesArrH4Txt = document.createTextNode("Date: "+matchesArr[data].date);
+
+        // var matchesArrTeam1H4 = document.createElement("h4");
+        // var matchesArrTeam1H4Txt = document.createTextNode("Team 1: "+matchesArr[data].team1);
+
+        // var matchesArrTeam2H4 = document.createElement("h4");
+        // var matchesArrTeam2H4Txt = document.createTextNode("Team 2: "+matchesArr[data].team2);
+
+        // var matchesArrTeam2H4 = document.createElement("h4");
+        // var matchesArrTeam2H4Txt = document.createTextNode("Team 2: "+matchesArr[data].team2);
+        
+       
+        // console.log(score)
         
         
 
             
-    listingDiv.appendChild(matchesArrH4);
-    matchesArrH4.appendChild(matchesArrH4Txt)
+    // listingDiv.appendChild(matchesArrH4);
+    // matchesArrH4.appendChild(matchesArrH4Txt)
          
-    listingDiv.appendChild(matchesArrTeam1H4);
-    matchesArrTeam1H4.appendChild(matchesArrTeam1H4Txt)
+    // listingDiv.appendChild(matchesArrTeam1H4);
+    // matchesArrTeam1H4.appendChild(matchesArrTeam1H4Txt)
 
-    listingDiv.appendChild(matchesArrTeam2H4);
-    matchesArrTeam2H4.appendChild(matchesArrTeam2H4Txt)
+    // listingDiv.appendChild(matchesArrTeam2H4);
+    // matchesArrTeam2H4.appendChild(matchesArrTeam2H4Txt)
 
-    listingDiv.appendChild(scoreH4);
-    scoreH4.appendChild(scoreH4Txt)
+    // listingDiv.appendChild(scoreH4);
+    // scoreH4.appendChild(scoreH4Txt)
 
     // console.log(matchesArr[data].team1)
 
